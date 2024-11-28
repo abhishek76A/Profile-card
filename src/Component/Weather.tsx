@@ -8,7 +8,6 @@ const Weather: React.FC = () => {
     const [input, setInput] = useState<string>("");
 
     useEffect(() => {
-        // Fetch weather data for the default location on component mount
         const getWeather = async () => {
             const data: WeatherResponse | null = await fetchWeatherData(location);
             setWeather(data);
