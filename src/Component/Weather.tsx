@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchWeatherData, WeatherResponse } from "./Service/WeatherApi";
 
 const Weather: React.FC = () => {
-    // State to store weather data
+
     const [weather, setWeather] = useState<WeatherResponse | null>(null);
     const [location, setLocation] = useState<string>("Ranchi");
     const [input, setInput] = useState<string>("");
@@ -16,12 +16,10 @@ const Weather: React.FC = () => {
 
         getWeather();
     }, [location]);
-
-    // Handler for search button click
     const handleSearch = () => {
         if (input.trim()) {
-            setLocation(input.trim()); // Update location state to trigger useEffect
-            setInput(""); // Clear the input field
+            setLocation(input.trim());
+            setInput("");
         }
     };
 
@@ -45,7 +43,7 @@ const Weather: React.FC = () => {
                     </button>
                 </div>
 
-                {/* Weather Information */}
+
                 {weather ? (
                     <>
                         <h1 className="text-2xl font-bold text-center mb-4">
