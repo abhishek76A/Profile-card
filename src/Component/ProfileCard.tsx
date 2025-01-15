@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../assets/profile.jpg'
 
 const ProfileCard: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const ProfileCard: React.FC = () => {
             <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white">
                 <div className="flex justify-center mt-4">
                     <img
-                        src="https://via.placeholder.com/150"
+                        src={img}
                         alt="Profile"
                         className="rounded-full w-32 h-32 border-4 border-indigo-500"
                     />
