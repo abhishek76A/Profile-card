@@ -1,12 +1,13 @@
 import './App.css'
-import Weather from "./Component/Weather.tsx";
+import ProfileCard from "./Component/ProfileCard";
 
 
 function App() {
 
   return (
       <div>
-          <Weather />
+          <ProfileCard/>
+
       </div>
   );
 }
